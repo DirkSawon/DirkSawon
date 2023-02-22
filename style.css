@@ -1,0 +1,390 @@
+*
+{
+    box-sizing: border-box;
+    border:1px solid black;
+    margin:0;
+    padding:0;
+}
+
+.dropdown, .home, .about, .cv, .contact
+{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    border:1px solid #DFDFDF;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  10px 10px 20px #d9d9d9,
+                 -10px -10px 20px #ffffff;
+}
+
+.dropdown::before
+{
+    width:auto;
+    height:auto;
+    font-family: 'FontAwesome';
+    content:'\f0c9';
+    color:black;
+    font-size:2em;
+    padding: 32px;
+    margin-bottom:0px;
+    text-align:center;
+}
+
+.dropdown:hover, .home:hover, .about:hover, .cv:hover, .contact:hover
+{
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  10px 10px 20px #d9d9d9,
+                -10px -10px 20px #ffffff;
+}
+
+.dropdown:hover .menu
+{
+    visibility: visible;
+}
+
+.menu
+{
+    visibility: hidden;
+    width:50px;
+    height:200px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-areas: "home" "about" "cv" "contact";
+    gap:1px;
+    margin-top:0px;
+    background-color: transparent;
+}
+
+a
+{
+    text-decoration:none;
+    color:black;
+    width: 1fr;
+    min-width:80px;
+}
+
+.home
+{
+    margin-top:10px;
+}
+
+.home, .about, .cv, .contact
+{
+    height:50px;
+    width:50px;
+    
+    background-color: white;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.home::before, .about::before, .cv::before, .contact::before
+{
+    font-family: 'FontAwesome';
+    margin:auto;
+}
+
+.home
+{
+    grid-area: home;
+}
+
+.home::before
+{
+    content:'\f015';
+}
+
+.about
+{
+    grid-area: about;
+}
+
+.about::before
+{
+    content:'\f2bb';
+}
+
+.cv
+{
+    grid-area: cv;
+}
+
+.cv::before
+{
+    /* content:'\f15b'; */
+    content:'\f0a3';
+}
+
+.contact
+{
+    grid-area: contact;
+}
+
+.contact::before
+{
+    content:'\f0e0';
+}
+
+form
+{
+    border:1px solid #b9b9b9;
+    padding:20px;
+}
+
+input, label
+{
+    padding-left:10px;
+    border-radius:5px;
+}
+
+input
+{
+    border:2px solid #d9d9d9;
+}
+
+label 
+{
+    margin-top:10px;
+    border:none;
+}
+
+input:hover, input:focus, input:checked
+{
+    border:2px solid grey;
+    box-shadow: 5px 5px 10px #b9b9b9;
+}
+
+
+
+/* Mobile */
+@media screen and (max-width:480px)
+{
+    body
+    {
+        width:99vw;
+        height:98vh;
+        display:grid;
+        grid-template-columns:50px 9fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-areas: 
+            "dd mn"
+            /* "hl ct" */
+            "dd mn"
+            "ft ft";
+        padding:5px;
+    }
+
+    .menu
+    {
+        width:50px;
+        height:50px;
+        grid-template-rows: 50px 50px 50px 50px;
+        grid-template-areas: "home" "about" "cv" "contact";
+        gap:1px;
+        margin-top:0px;
+    }
+
+    .dropdown, .home, .about, .cv, .contact
+    {
+        height:50px;
+        width:50px;
+    }
+
+    .home::before, .about::before, .cv::before, .contact::before
+    {
+        margin:auto;
+        font-size:calc(0.75* 50px);
+    }
+
+    .menu
+    {
+        height:50px;
+        width:50px;
+    }
+
+    .dropdown
+    {
+        grid-area:dd;
+    }
+
+    .headline
+    {
+        height:100%;
+        width:100%;
+        grid-area:hl;
+    }
+
+    .content
+    {
+        height:100%;
+        width:100%;
+        grid-area:ct;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "hl ct";
+    }
+
+    .foot
+    {
+        height:100%;
+        width:100%;
+        grid-area:ft;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width:481px) 
+{
+    body
+    {
+        width:99vw;
+        height:98vh;
+        display:grid;
+        grid-template-columns: 1fr 9fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-areas: 
+        "dd mn"
+        /* "hl ct" */
+        "dd mn"
+        "ft ft";
+        padding:10px;
+    }
+
+    .menu
+    {
+        width:66px;
+        height:66px;
+        grid-template-rows: 66px 66px 66px 66px;
+        grid-template-areas: "home" "about" "cv" "contact";
+        gap:1px;
+        margin-top:0px;
+    }
+
+    .dropdown, .home, .about, .cv, .contact
+    {
+        height:66px;
+        width:66px;
+    }
+
+    .home::before, .about::before, .cv::before, .contact::before
+    {
+        margin:auto;
+        font-size:calc(0.75* 66px);
+    }
+
+    .menu
+    {
+        height:66px;
+        width:66px;
+    }
+
+    .dropdown
+    {
+        grid-area:dd;
+    }
+
+    .headline
+    {
+        height:100%;
+        width:100%;
+        grid-area:hl;
+    }
+
+    .content
+    {
+        height:100%;
+        width:100%;
+        grid-area:ct;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "hl ct";
+    }
+
+    .foot
+    {
+        height:100%;
+        width:100%;
+        grid-area:ft;
+    }
+}
+
+/* PC */
+@media screen and (min-width:769px)
+{
+    body
+    {
+        width:99vw;
+        height:98vh;
+        display:grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-areas: 
+        "dd mn"
+        /* "hl ct" */
+        "dd mn"
+        "ft ft";
+        padding:20px;
+    }
+
+    .menu
+    {
+        width:100px;
+        height:100px;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-areas: "home" "about" "cv" "contact";
+        gap:1px;
+        margin-top:0px;
+    }
+
+    .dropdown, .home, .about, .cv, .contact
+    {
+        height:100px;
+        width:100px;
+    }
+
+    .home::before, .about::before, .cv::before, .contact::before
+    {
+        margin:auto;
+        font-size:calc(0.75* 100px);
+    }
+
+    .menu
+    {
+        height:100px;
+        width:100px;
+    }
+
+    .dropdown
+    {
+        grid-area:dd;
+    }
+
+    .headline
+    {
+        height:100%;
+        width:100%;
+        grid-area:hl;
+    }
+
+    .content
+    {
+        height:100%;
+        width:100%;
+        grid-area:ct;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "hl ct";
+    }
+
+    .foot
+    {
+        height:100%;
+        width:100%;
+        grid-area:ft;
+    }
+
+}
