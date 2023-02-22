@@ -1,9 +1,22 @@
 *
 {
     box-sizing: border-box;
-    /* border:1px solid black; */
     margin:0;
     padding:0;
+}
+
+.headline
+{
+    background:linear-gradient(45deg,white 20%, grey, blue, black);
+    border-top:1px solid #d9d9d9;
+    border-bottom:1px solid #d9d9d9;
+    border-right:1px solid #d9d9d9;
+}
+
+.foot
+{
+    background:linear-gradient(225deg,white 20%, grey, blue, black);
+    border:1px solid #d9d9d9;
 }
 
 .dropdown, .home, .about, .cv, .contact
@@ -158,7 +171,37 @@ input:hover, input:focus, input:checked
     box-shadow: 5px 5px 10px #b9b9b9;
 }
 
+input[type="textarea"]
+{
+    width:auto;
+    height:200px;
+}
 
+.h1-cv
+{
+    width:200px;
+    border:1px solid black;
+    border-radius: 10px;
+    margin-bottom:20px;
+    box-shadow: 10px 10px 10px grey;
+    padding-left:10px;
+}
+
+table
+{
+    max-width: 800px;
+    border-spacing: 10px;
+    border:1px solid black;
+    border-radius: 10px;
+    margin-bottom:20px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+table>tr:first-child
+    {
+        min-width:150px;
+        max-width:150px;
+    }
 
 /* Mobile */
 @media screen and (max-width:480px)
@@ -251,6 +294,21 @@ input:hover, input:focus, input:checked
     label
     {
         width:150px;
+    }
+
+    table
+    {
+        width:1fr;
+    }
+    .vitae
+    {
+        display:flex;
+        flex-direction:column;
+    }
+
+    th
+    {
+        text-align: left;
     }
 
     .foot
@@ -350,6 +408,17 @@ input:hover, input:focus, input:checked
         gap:10px;
     }
 
+    .vitae
+    {
+        display:flex;
+        flex-direction:column;
+    }
+
+    th
+    {
+        text-align: left;
+    }
+
     .foot
     {
         height:100%;
@@ -444,6 +513,17 @@ input:hover, input:focus, input:checked
         grid-template-rows: auto;
         grid-template-areas: "label input";
         gap:10px;
+    }
+
+    .vitae
+    {
+        display:flex;
+        flex-direction:column;
+    }
+
+    th
+    {
+        text-align: left;
     }
 
     .foot
