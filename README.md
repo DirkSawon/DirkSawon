@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-https://dirksawon.github.io/DirkSawon/
+https://dirksawon.github.io/Portfolio/
 
 <!--
 **DirkSawon/DirkSawon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
