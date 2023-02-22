@@ -1,7 +1,7 @@
 *
 {
     box-sizing: border-box;
-    border:1px solid black;
+    /* border:1px solid black; */
     margin:0;
     padding:0;
 }
@@ -25,8 +25,10 @@
     content:'\f0c9';
     color:black;
     font-size:2em;
-    padding: 32px;
+    padding: 0px;
     margin-bottom:0px;
+    justify-content: center;
+    align-items: center;
     text-align:center;
 }
 
@@ -61,7 +63,7 @@ a
     text-decoration:none;
     color:black;
     width: 1fr;
-    min-width:80px;
+    /* min-width:80px; */
 }
 
 .home
@@ -79,10 +81,11 @@ a
     margin-bottom:10px;
 }
 
-.home::before, .about::before, .cv::before, .contact::before
+.dropdown::before, .home::before, .about::before, .cv::before, .contact::before
 {
     font-family: 'FontAwesome';
-    margin:auto;
+    margin:0;
+    text-align: center;
 }
 
 .home
@@ -177,8 +180,8 @@ input:hover, input:focus, input:checked
 
     .menu
     {
-        width:50px;
-        height:50px;
+        height:200px;
+        width:50px;        
         grid-template-rows: 50px 50px 50px 50px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
@@ -191,16 +194,14 @@ input:hover, input:focus, input:checked
         width:50px;
     }
 
-    .home::before, .about::before, .cv::before, .contact::before
+    .dropdown::before, .home::before, .about::before, .cv::before, .contact::before
     {
-        margin:auto;
-        font-size:calc(0.75* 50px);
-    }
-
-    .menu
-    {
-        height:50px;
-        width:50px;
+        margin:0;
+        font-size:38px;
+        padding-top:6px;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
     }
 
     .dropdown
@@ -210,9 +211,10 @@ input:hover, input:focus, input:checked
 
     .headline
     {
-        height:100%;
+        height:50px;
         width:100%;
         grid-area:hl;
+        padding:5px;
     }
 
     .content
@@ -221,9 +223,24 @@ input:hover, input:focus, input:checked
         width:100%;
         grid-area:ct;
         display:grid;
-        grid-template-columns:1fr;
+        grid-template-columns:300px;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hl ct";
+        padding:5px;
+    }
+
+    form
+    {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "label" "input";
+        gap:10px;
+    }
+
+    label
+    {
+        width:150px;
     }
 
     .foot
@@ -231,6 +248,7 @@ input:hover, input:focus, input:checked
         height:100%;
         width:100%;
         grid-area:ft;
+        padding:5px;
     }
 }
 
@@ -254,12 +272,12 @@ input:hover, input:focus, input:checked
 
     .menu
     {
-        width:66px;
-        height:66px;
+        height:264px;
+        width:66px;        
         grid-template-rows: 66px 66px 66px 66px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:0px;
+        margin-top:5px;
     }
 
     .dropdown, .home, .about, .cv, .contact
@@ -268,16 +286,14 @@ input:hover, input:focus, input:checked
         width:66px;
     }
 
-    .home::before, .about::before, .cv::before, .contact::before
+    .dropdown::before, .home::before, .about::before, .cv::before, .contact::before
     {
-        margin:auto;
-        font-size:calc(0.75* 66px);
-    }
-
-    .menu
-    {
-        height:66px;
-        width:66px;
+        margin:0;
+        font-size:50px;
+        padding-top:8px;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
     }
 
     .dropdown
@@ -287,9 +303,10 @@ input:hover, input:focus, input:checked
 
     .headline
     {
-        height:100%;
+        height:66px;
         width:100%;
         grid-area:hl;
+        padding:10px;
     }
 
     .content
@@ -301,6 +318,16 @@ input:hover, input:focus, input:checked
         grid-template-columns:1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hl ct";
+        padding:10px;
+    }
+
+    form
+    {
+        display:grid;
+        grid-template-columns: 150px 300px;
+        grid-template-rows: auto;
+        grid-template-areas: "label input";
+        gap:10px;
     }
 
     .foot
@@ -308,6 +335,7 @@ input:hover, input:focus, input:checked
         height:100%;
         width:100%;
         grid-area:ft;
+        padding:10px;
     }
 }
 
@@ -331,12 +359,12 @@ input:hover, input:focus, input:checked
 
     .menu
     {
-        width:100px;
-        height:100px;
+        height:400px;
+        width:100px;        
         grid-template-rows: 100px 100px 100px 100px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:0px;
+        margin-top:15px;
     }
 
     .dropdown, .home, .about, .cv, .contact
@@ -345,16 +373,14 @@ input:hover, input:focus, input:checked
         width:100px;
     }
 
-    .home::before, .about::before, .cv::before, .contact::before
+    .dropdown::before, .home::before, .about::before, .cv::before, .contact::before
     {
-        margin:auto;
-        font-size:calc(0.75* 100px);
-    }
-
-    .menu
-    {
-        height:100px;
-        width:100px;
+        margin:0;
+        font-size:75px;
+        padding-top:12px;
+        text-align:center;
+        justify-content: center;
+        align-items: center;
     }
 
     .dropdown
@@ -364,7 +390,7 @@ input:hover, input:focus, input:checked
 
     .headline
     {
-        height:100%;
+        height:100px;
         width:100%;
         grid-area:hl;
     }
@@ -378,6 +404,16 @@ input:hover, input:focus, input:checked
         grid-template-columns:1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hl ct";
+        padding:20px;
+    }
+
+    form
+    {
+        display:grid;
+        grid-template-columns: 150px 300px;
+        grid-template-rows: auto;
+        grid-template-areas: "label input";
+        gap:10px;
     }
 
     .foot
@@ -385,6 +421,7 @@ input:hover, input:focus, input:checked
         height:100%;
         width:100%;
         grid-area:ft;
+        padding:20px;
     }
 
 }
