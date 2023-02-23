@@ -13,6 +13,29 @@
     border-right:1px solid #d9d9d9;
 }
 
+.headline:hover
+{
+    /* animation: banner 1s ease-in-out alternate infinite; */
+    animation-name: banner;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; /* Unendliche Animationsdurchläufe */
+    animation-direction: alternate;
+}
+
+@keyframes banner
+{
+    from
+    {
+        background:linear-gradient(45deg,white 20%, grey, blue, black);
+    }
+
+    to
+    {
+        background:linear-gradient(45deg,white 40%, grey 60%, blue, black 80%);
+    }
+}
+
 .foot
 {
     background:linear-gradient(225deg,white 20%, grey, blue, black);
@@ -199,10 +222,10 @@ table
 }
 
 table>tr:first-child
-    {
-        min-width:150px;
-        max-width:150px;
-    }
+{
+    min-width:150px;
+    max-width:150px;
+}
 
 /* Mobile */
 @media screen and (max-width:480px)
@@ -277,10 +300,37 @@ table>tr:first-child
         width:100%;
         grid-area:ct;
         display:grid;
-        grid-template-columns:300px;
+        grid-template-columns:1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hl ct";
         padding:5px;
+    }
+
+    .index-content, .about-content
+    {
+        border:1px solid grey;
+        box-shadow: 5px 5px 10px grey;
+        padding:10px;
+        margin:20px;
+    }
+
+    .index-content>p, .about-content>p
+    {
+        max-width: calc(98vw - 50px);
+    }
+
+    .portrait
+    {
+        max-width:350px;
+        height:450px;
+        border:1px solid black;
+    }
+
+    .about-content>h1
+    {
+        margin-top:1em;
+        margin-bottom:1em;
+        /* text-align: center; */
     }
 
     form
@@ -400,6 +450,33 @@ table>tr:first-child
         padding:10px;
     }
 
+    .index-content, .about-content
+    {
+        border:1px solid grey;
+        box-shadow: 7px 7px 13px grey;
+        padding:10px;
+        margin:20px;
+    }
+
+    .index-content>p, .about-content>p
+    {
+        max-width: calc(98vw - 75px);
+    }
+
+    .portrait
+    {
+        max-width:350px;
+        height:450px;
+        border:1px solid black;
+    }
+
+    .about-content>h1
+    {
+        margin-top:1em;
+        margin-bottom:1em;
+        /* text-align: center; */
+    }
+
     form
     {
         display:grid;
@@ -505,6 +582,33 @@ table>tr:first-child
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hl ct";
         padding:20px;
+    }
+
+    .index-content, .about-content
+    {
+        border:1px solid grey;
+        box-shadow: 10px 10px 20px grey;
+        padding:10px;
+        margin:20px;
+    }
+
+    .index-content>p, .about-content>p
+    {
+        max-width: calc(98vw - 100px);
+    }
+
+    .portrait
+    {
+        max-width:350px;
+        height:450px;
+        border:1px solid black;
+    }
+
+    .about-content>h1
+    {
+        margin-top:1em;
+        margin-bottom:1em;
+        /* text-align: center; */
     }
 
     form
