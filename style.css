@@ -16,14 +16,14 @@
 .headline:hover
 {
     /* animation: banner 1s ease-in-out alternate infinite; */
-    animation-name: banner;
+    animation-name: banner-hl;
     animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1; /* Unendliche Animationsdurchläufe */
-    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* animation-iteration-count: 1; */
+    /* animation-direction: alternate; */
 }
 
-@keyframes banner
+@keyframes banner-hl
 {
     from
     {
@@ -32,7 +32,7 @@
 
     to
     {
-        background:linear-gradient(45deg,white 40%, grey 60%, blue, black 80%);
+        background:linear-gradient(45deg,white 40%, grey 60%, blue, black);
     }
 }
 
@@ -41,6 +41,28 @@
     background:linear-gradient(225deg,white 20%, grey, blue, black);
     border:1px solid #d9d9d9;
     text-align: right;
+}
+
+.foot:hover
+{
+    animation-name: banner-ft;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    /* animation-iteration-count: 1; */
+    /* animation-direction: alternate; */
+}
+
+@keyframes banner-ft
+{
+    from
+    {
+        background:linear-gradient(225deg,white 20%, grey, blue, black);
+    }
+
+    to
+    {
+        background:linear-gradient(225deg,white 40%, grey 60%, blue, black);
+    }
 }
 
 .dropdown, .home, .about, .cv, .contact
@@ -105,7 +127,7 @@ a
 
 .home
 {
-    margin-top:10px;
+    margin-top:0px;
 }
 
 .home, .about, .cv, .contact
@@ -247,12 +269,12 @@ table>tr:first-child
 
     .menu
     {
-        height:200px;
+        height:220px;
         width:50px;        
         grid-template-rows: 50px 50px 50px 50px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:0px;
+        margin-top:5px;
     }
 
     .dropdown, .home, .about, .cv, .contact
@@ -268,10 +290,51 @@ table>tr:first-child
     {
         margin:0;
         font-size:38px;
-        padding-top:6px;
-        text-align:center;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .dropdown::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .home::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .about::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .cv::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .contact::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
     }
 
     .dropdown:hover, .home:hover, .about:hover, .cv:hover, .contact:hover
@@ -415,7 +478,52 @@ table>tr:first-child
         padding-top:8px;
         text-align:center;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
+    }
+
+    .dropdown::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .home::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .about::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .cv::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .contact::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
     }
 
     .dropdown:hover, .home:hover, .about:hover, .cv:hover, .contact:hover
@@ -551,6 +659,51 @@ table>tr:first-child
         text-align:center;
         justify-content: center;
         align-items: center;
+    }
+
+    .dropdown::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .home::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .about::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .cv::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
+    }
+
+    .contact::before
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items:center;
+        padding-top:5px;
     }
 
     .dropdown:hover, .home:hover, .about:hover, .cv:hover, .contact:hover
