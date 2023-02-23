@@ -306,7 +306,7 @@ table>tr:first-child
         grid-template-rows: 50px 50px 50px 50px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:5px;
+        margin-top:6px;
     }
 
     .dropdown, .home, .about, .cv, .contact
@@ -491,7 +491,7 @@ table>tr:first-child
         grid-template-rows: 66px 66px 66px 66px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:5px;
+        margin-top:10px;
     }
 
     .dropdown, .home, .about, .cv, .contact
@@ -671,7 +671,7 @@ table>tr:first-child
         grid-template-rows: 100px 100px 100px 100px;
         grid-template-areas: "home" "about" "cv" "contact";
         gap:1px;
-        margin-top:15px;
+        margin-top:20px;
     }
 
     .dropdown, .home, .about, .cv, .contact
