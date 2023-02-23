@@ -19,21 +19,36 @@
     /* animation: banner 1s ease-in-out alternate infinite; */
     animation-name: banner-hl;
     animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     /* animation-iteration-count: 1; */
     /* animation-direction: alternate; */
 }
 
 @keyframes banner-hl
 {
-    from
+    0%
     {
         background:linear-gradient(45deg,white 20%, grey, blue, black);
     }
 
-    to
+    25%
     {
-        background:linear-gradient(45deg,white 40%, grey 60%, blue, black);
+        background:linear-gradient(45deg,white 40%, grey 60%, blue 80%, black);
+    }
+
+    50%
+    {
+        background:linear-gradient(45deg,white 60%, grey 80%, blue 95%, black);
+    }
+
+    75%
+    {
+        background:linear-gradient(45deg,white 40%, grey 60%, blue 80%, black);
+    }
+
+    100%
+    {
+        background:linear-gradient(45deg,white 20%, grey, blue, black);
     }
 }
 
@@ -55,15 +70,31 @@
 
 @keyframes banner-ft
 {
-    from
+    0%
     {
         background:linear-gradient(225deg,white 20%, grey, blue, black);
     }
 
-    to
+    25%
     {
-        background:linear-gradient(225deg,white 40%, grey 60%, blue, black);
+        background:linear-gradient(225deg,white 40%, grey 60%, blue 80%, black);
     }
+
+    50%
+    {
+        background:linear-gradient(225deg,white 60%, grey 80%, blue 95%, black);
+    }
+
+    75%
+    {
+        background:linear-gradient(225deg,white 40%, grey 60%, blue 80%, black);
+    }
+
+    100%
+    {
+        background:linear-gradient(225deg,white 20%, grey, blue, black);
+    }
+
 }
 
 .dropdown, .home, .about, .cv, .contact
