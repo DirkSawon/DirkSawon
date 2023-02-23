@@ -387,6 +387,9 @@ table>tr:first-child
         width:100%;
         grid-area:hl;
         padding:5px;
+        font-size:2em;
+        font-weight: bold;
+        /* font-style:oblique; */
     }
 
     .content
@@ -576,6 +579,11 @@ table>tr:first-child
         width:100%;
         grid-area:hl;
         padding:10px;
+        padding-top:8px;
+        padding-bottom:12px;
+        font-size: 2.7em;
+        font-weight: bold;
+        /* font-style: oblique; */
     }
 
     .content
@@ -755,6 +763,11 @@ table>tr:first-child
         height:100px;
         width:100%;
         grid-area:hl;
+        padding-top:10px;
+        padding-bottom:12px;
+        font-size: 4em;
+        font-weight: bold;
+        /* font-style: oblique; */
     }
 
 
